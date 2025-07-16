@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header { background-color: #333; color: white; text-align: center; padding: 1em; }
+    nav { margin: 0.5em; text-align: center; }
+    nav a { color: #333; margin: 0 0.5em; text-decoration: none; font-size: 1rem; }
+    .content { padding: 1em; }
+    .form-section { margin-top: 1em; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .leaderboard-section iframe {
+      width: 2000px;
+      height: 527px;
+      border: none;
+      max-width: 100%;
+    }
+    .rules-section { margin-top: 1em; }
+    .rules-section h3 { color: #333; font-size: 1.2em; margin-bottom: 0.5em; }
+    .rules-section ul { list-style-type: disc; margin-left: 1.5em; margin-bottom: 1em; }
+    .rules-section ol { margin-left: 1.5em; margin-bottom: 1em; }
+    .rules-section .amendment { font-style: italic; color: #666; }
+    .rules-section p { margin-bottom: 1em; line-height: 1.5; }
+    .twitter-timeline-container { margin-top: 1em; }
+
+    /* Media Queries for Mobile */
+    @media (max-width: 600px) {
+      nav a { margin: 0 0.3em; font-size: 0.9rem; }
+      .content { padding: 0.5em; }
+      .leaderboard-section iframe { width: 100%; height: 300px; }
+      .rules-section h3 { font-size: 1em; }
+      .rules-section ul, .rules-section ol { margin-left: 1em; }
+      .twitter-timeline-container { width: 100%; }
+      header { padding: 0.5em; }
+    }
+  </style>
+  <script>
+    function openTab(tabName) {
+      var i, tabContent;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+    window.onload = function() { openTab("home"); };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>FUPA HQ</h1>
+  </header>
+  <nav>
+    <a href="javascript:void(0)" onclick="openTab('home')">Home</a>
+    <a href="javascript:void(0)" onclick="openTab('rules')">Rules</a>
+    <a href="javascript:void(0)" onclick="openTab('leaderboard')">Leaderboard</a>
+    <a href="javascript:void(0)" onclick="openTab('contact')">Contact</a>
+  </nav>
+  <div class="content">
+    <div id="home" class="tab-content active">
+      <p>Welcome to the 2025 FUPA HQ</p>
+      <div class="form-section">
+        <p>FUPA Picks Week 1: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOKAcovkFlERo8AtmJ2d4EYLuIgTIuMP__1of7AtC2vGUcGg/viewform?usp=header">Click Here</a></p>
+      </div>
+      <div class="twitter-timeline-container">
+        <a class="twitter-timeline" href="https://twitter.com/FUPAupdates?ref_src=twsrc%5Etfw">Tweets by FUPAupdates</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    <div id="rules" class="tab-content">
+      <h2>Rules</h2>
+      <div class="rules-section">
+        <h3>How FUPA Works</h3>
+        <ul>
+          <li>$10 each per week paid to me for the cost of the parlay.</li>
+          <li>Venmo: @Dario-Petronzio</li>
+          <li>$110 (11) team parlay - payouts should be in the $100-150k range, $5k-10k payouts after tax.</li>
+        </ul>
+        <p>But the odds of us winning a huge parlay are small, so we must find a way to punish the bad picks and reward the good picks. Here's how we do that:</p>
+        <h3>Weekly Parlay Winners/Losers</h3>
+        <ul>
+          <li>If you win your pick, you are guaranteed to win at least $10 (breakeven for the week).</li>
+          <li>If you lose your pick, you are guaranteed to lose at least $10.</li>
+        </ul>
+        <h4>Scenarios</h4>
+        <ul>
+          <li>If >50% of the parlay wins, e.g., 6/11 are winners, the losers must pay enough to ensure all winners get $10. (5 losers would owe $12 each to equal $60 for the winners.)</li>
+          <li>If >50% of the parlay loses, e.g., only 2 players are winners, they get to split the total of the losers' $10 each. (9 losing players each paying $10 = $90 split between two winners = $45 each.)</li>
+          <li>If it's a draw, e.g., 5/10 teams win, losers' money goes straight to winners.</li>
+          <li><strong>Worst Case Scenario</strong>: You are the only person who did not get their pick right and jeopardized our big payout; you now owe every other player $10.</li>
+          <li><strong>Best Case Scenario</strong>: We win the parlay and split it evenly amongst winners.</li>
+          <li><strong>2nd Best Case Scenario</strong>: You are the only person who picked correctly; you get $10 from every other player.</li>
+          <li>In the case of a push and a parlay win, the player that pushed gets half a share; the remaining half is distributed amongst the winners.</li>
+          <li class="amendment">Potential Amendment: There are 198 total picks per season; each parlay pick that is lost will be -$15, each parlay win will be worth an equal “share” of the money paid by the losers.</li>
+        </ul>
+        <h3>Betting Guidelines</h3>
+        <ul>
+          <li>NO money line favorites that are -115 or higher.</li>
+          <li>Spreads can be up to -120.</li>
+          <li>NO props that are -115 or higher.</li>
+        </ul>
+        <h3>Relegation</h3>
+        <p>Using the last 5 weeks, we calculate the win % of each player; the top 11 win % players are in the parlay, the rest are relegated.</p>
+        <ul>
+          <li><strong>Tiebreakers</strong>:
+            <ol>
+              <li>Odds value of the last 5 picks.</li>
+              <li>Last 3-week win %.</li>
+              <li>Odds value of the last 3 picks.</li>
+            </ol>
+          </li>
+        </ul>
+        <h3>Weighted Payouts</h3>
+        <p>Payouts on the parlay are based on the odds of your individual bet. Each member will be paid according to the odds of your bet. (Example below: [Placeholder for example table, to be added if provided].)</p>
+        <h3>Associate Members</h3>
+        <p>Associate members/relegated members will still make picks to show a history of win %; we will upgrade an associate member into one of the 11 full-member spots once their win % is in the top 11.</p>
+        <h3>Season Championship</h3>
+        <ul>
+          <li>$50 per person (full or associate members can both play, this is optional).</li>
+          <li>2024 payouts:
+            <ul>
+              <li>1st place: $500</li>
+              <li>2nd place: $175</li>
+              <li>3rd place: $75</li>
+            </ul>
+          </li>
+          <li><span class="amendment">Potential Amendment - THE 600 CLUB</span>: $50 per person (full or associate members can both play, this is optional).</li>
+          <li>2025 Payouts: All members who win above 60% of their picks will share the total pot based on how many wins the member has. For example, the following 4 members all pick above .600:
+            <ul>
+              <li>Player 1: 15 wins (15 wins / 49 total wins = 30%)</li>
+              <li>Player 2: 12 wins (12 wins / 49 total wins = 24.5%)</li>
+              <li>Player 3: 11 wins (11 wins / 49 total wins = 22.45%)</li>
+              <li>Player 4: 11 wins (11 wins / 49 total wins = 22.45%)</li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Additional Instructions</h3>
+        <p>Please Venmo me and send your pick to the chat before noon Saturday morning. The only way to lock in your pick is to send the $10 (if you have money in reserves from wins, that's OK too).</p>
+      </div>
+    </div>
+    <div id="leaderboard" class="tab-content">
+      <h2>Leaderboard</h2>
+      <div class="leaderboard-section">
+        <iframe width="2000" height="527" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/a0231f37de8f0113/IQTLHE--jY9VQIOHdVUaFWKPATyI6Um8Qb-xTJVZGD7C1Yo?em=2&wdAllowInteractivity=False&ActiveCell='FUPA%20HQ%20LEADERBOARD'!A1&Item='FUPA%20HQ%20LEADERBOARD'!A1%3AZ20&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+      </div>
+    </div>
+    <div id="contact" class="tab-content">
+      <h2>Contact</h2>
+      <p>Add contact information here!</p>
+    </div>
+  </div>
+</body>
+</html>
