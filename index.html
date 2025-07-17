@@ -19,7 +19,18 @@
       border: none;
       max-width: 100%;
     }
-    .rules-section iframe {
+    .rules-section, .payment-tracker-section {
+      width: 100%;
+      max-width: 100%;
+    }
+    .rules-section p, .payment-tracker-section p {
+      margin: 0.5em 0;
+    }
+    .rules-section ul {
+      margin: 0.5em 0 0.5em 1em;
+      padding-left: 1em;
+    }
+    .payment-tracker-section iframe {
       width: 100%;
       height: 600px;
       border: none;
@@ -29,7 +40,7 @@
       nav a { margin: 0 0.3em; font-size: 0.9rem; }
       .content { padding: 0.5em; }
       .leaderboard-section iframe { width: 100%; height: 300px; }
-      .rules-section iframe { height: 400px; }
+      .payment-tracker-section iframe { height: 400px; }
       header { padding: 0.5em; }
     }
   </style>
@@ -53,13 +64,14 @@
     <a href="javascript:void(0)" onclick="openTab('home')">Home</a>
     <a href="javascript:void(0)" onclick="openTab('rules')">Rules</a>
     <a href="javascript:void(0)" onclick="openTab('leaderboard')">Leaderboard</a>
+    <a href="javascript:void(0)" onclick="openTab('paymentTracker')">Payment Tracker</a>
     <a href="javascript:void(0)" onclick="openTab('contact')">Contact</a>
   </nav>
   <div class="content">
     <div id="home" class="tab-content active">
       <p>Welcome to the 2025 FUPA HQ</p>
       <div class="form-section">
-        <p>FUPA Picks Week 1: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAMAP9ONUOEdNRDI0VjZWV0RTSVc0T1JCTkZHUVY2OC4u">Submit Entry</a></p>
+        <p>FUPA Entry Form: <a href="https://forms.office.com/r/4d36FT2cnw">Submit Your Picks Here</a></p>
       </div>
       <div class="twitter-timeline-container">
         <a class="twitter-timeline" href="https://twitter.com/FUPAupdates?ref_src=twsrc%5Etfw">Tweets by FUPAupdates</a>
@@ -69,20 +81,62 @@
     <div id="rules" class="tab-content">
       <h2>Rules</h2>
       <div class="rules-section">
-        <iframe src="https://1drv.ms/b/c/a0231f37de8f0113/IQSj7lMo9JGkR4_0YXeS5GKxAZ6Mq_8t99h5bvdlPzQUFwc/preview" width="100%" height="600" frameborder="0" scrolling="yes" allowfullscreen></iframe>
-        <p><em>If the PDF does not load, <a href="https://1drv.ms/b/c/a0231f37de8f0113/IQSj7lMo9JGkR4_0YXeS5GKxAZ6Mq_8t99h5bvdlPzQUFwc" target="_blank">click here to view it</a>.</em></p>
-      </div>
-    </div>
-    <div id="leaderboard" class="tab-content">
-      <h2>Leaderboard</h2>
-      <div class="leaderboard-section">
-        <iframe width="2000" height="527" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/a0231f37de8f0113/IQTLHE--jY9VQIOHdVUaFWKPATyI6Um8Qb-xTJVZGD7C1Yo?em=2&wdAllowInteractivity=False&ActiveCell='FUPA%20HQ%20LEADERBOARD'!A1&Item='FUPA%20HQ%20LEADERBOARD'!A1%3AZ20&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-      </div>
-    </div>
-    <div id="contact" class="tab-content">
-      <h2>Contact</h2>
-      <p>Venmo: @Dario-Petronzio</p>
-    </div>
-  </div>
-</body>
-</html>
+        <h3>Football Universe Parlay Association: 101</h3>
+        <p>Each week, 11 people chip in $10 and bet an 11-team $110 parlay.</p>
+        <p>$110 (11) team parlay - payouts should be in the $100-200k range, $5k-10k payout per person after tax.</p>
+
+        <h3>BETTING GUIDELINES – we want to win some real money!!</h3>
+        <ul>
+          <li>NO MONEY LINE FAVORITES THAT ARE BELOW -115</li>
+          <li>SPREADS CAN BE UP TO -125</li>
+          <li>NO PROPS THAT ARE BELOW -115</li>
+        </ul>
+
+        <h3>PAYOUTS</h3>
+        <p>Here’s how FUPA payouts are calculated, the figure is your actual payout, I’ve already estimated taxes on the win so that is the least you will receive in cash, it could be more depending on what the accountant says. Payouts on the parlay are based on the odds of your individual bet. Each member will be paid according to the odds of your bet.</p>
+        <table>
+          <tr><th>Week 15</th><th>Odds</th><th>Payout</th></tr>
+          <tr><td>Jared</td><td>TB +2.5</td><td>100</td><td>$9,273.36</td></tr>
+          <tr><td>James H</td><td>WVU +5</td><td>-108</td><td>$8,929.90</td></tr>
+          <tr><td>Barney</td><td>KC -4</td><td>-112</td><td>$8,776.57</td></tr>
+          <tr><td>Texas</td><td>DEN -4.5</td><td>-108</td><td>$8,929.90</td></tr>
+          <tr><td>Brad</td><td>CIN -5</td><td>-112</td><td>$8,776.57</td></tr>
+          <tr><td>Alex</td><td>NYJ -3</td><td>-118</td><td>$8,566.07</td></tr>
+          <tr><td>Dario</td><td>PHI -5.5</td><td>-110</td><td>$8,851.84</td></tr>
+          <tr><td>Dan W</td><td>Army/Navy O39.5</td><td>-108</td><td>$8,929.90</td></tr>
+          <tr><td>Zach</td><td>ARI -6</td><td>-105</td><td>$9,052.56</td></tr>
+          <tr><td>Steve S</td><td>BUF +2.5</td><td>100</td><td>$9,273.36</td></tr>
+          <tr><td>Shane</td><td>SEA +2.5</td><td>-105</td><td>$9,052.56</td></tr>
+        </table>
+
+        <p>That’s it, that’s the point of the entire group, let’s get some sharp bettors with diverse opinions together and win a fat parlay every week.</p>
+        <p><strong>BUT</strong> winning a parlay with odds this high is very difficult, so we try to make it worthwhile for those who are picking well and punish those who are blowing it!</p>
+        <p>This is how we do that:</p>
+
+        <h3>Parlay Winners/Losers</h3>
+        <p>There are 198 total picks per season (11 x 18). Each parlay pick that is lost will cost you $15, each parlay win will be worth an equal “share” of the money paid by the losers.</p>
+        <p>So for example, if we win 100 of the 198 possible games (59.5%), the payout per parlay win would be $14.7 per game. I will track this and run a tab during the season.</p>
+
+        <p>OK- well we have way more than 11 people in the group, so how do we decide who gets to be in the parlay on any given week?</p>
+
+        <h3>RELEGATION</h3>
+        <p>We will use a 6 week moving average on your bets to determine your standing in the Association. The weights will follow this spreadsheet, I’ve also listed the weights for the first 5 weeks.</p>
+        <table>
+          <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+          <tr><td>4.76%</td><td>9.52%</td><td>14.29%</td><td>19.05%</td><td>23.81%</td><td>28.57%</td></tr>
+          <tr><td>6.67%</td><td>13.33%</td><td>20.00%</td><td>26.67%</td><td>33.33%</td><td></td></tr>
+          <tr><td>10.00%</td><td>20.00%</td><td>30.00%</td><td>40.00%</td><td></td><td></td></tr>
+          <tr><td>16.67%</td><td>33.33%</td><td>50.00%</td><td></td><td></td><td></td></tr>
+          <tr><td>33.33%</td><td>66.67%</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <h3>RELEGATED MEMBERS</h3>
+        <p>Relegated members will still make picks to show a history of win %, we will upgrade an associate member into one of the 11 full-member spots once their win % is in the top 11.</p>
+
+        <h3>SEASON CHAMPIONSHIP</h3>
+        <p>We also want to remain competitive throughout and reward those who have shown continuous success over the entire season. We do an optional season long side-pot of $50 per person.</p>
+        <p>At the end of the year, we will split that pot amongst every FUPA member that has picked above 60%, we call it The 600 club. In sports gambling, to break even, you must win 60% of your bets (to overcome a standard 10% juice) anything less than that and you are a loser.</p>
+        <p>We split the winnings in this fashion</p>
+        <p>For example, 4 members were all above .600 last season (in 2023 there were only 2)</p>
+        <ul>
+          <li>Player 1:
