@@ -33,6 +33,7 @@
     .rules-section, .payment-tracker-section {
       width: 100%;
       max-width: 100%;
+      text-align: left; /* Override to left-justify the Rules section */
     }
     .rules-section p, .payment-tracker-section p {
       margin: 0.5em 0;
@@ -50,7 +51,7 @@
     @media (max-width: 600px) {
       nav a { margin: 0 0.3em; font-size: 0.9rem; }
       .content { padding: 0.5em; }
-      .standings-section iframe { width: 100%; height: 300px; }
+      .leaderboard-section iframe { width: 100%; height: 300px; }
       .relegation-table-section iframe { width: 100%; height: 400px; }
       .payment-tracker-section iframe { height: 400px; }
       header { padding: 0.5em; }
@@ -82,10 +83,13 @@
   </nav>
   <div class="content">
     <div id="home" class="tab-content active">
-      <div style="height: 100px;"></div> <FUPA-4.png>
-      <p>Welcome to FUPA HQ</p>
+      <div style="height: 100px;"></div> <!-- Space for image -->
+      <p>Welcome to the 2025 FUPA HQ</p>
       <div class="form-section">
         <p>FUPA Entry Form: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAMAP9ONUOEdNRDI0VjZWV0RTSVc0T1JCTkZHUVY2OC4u">Submit Your Picks Here</a></p>
+      </div>
+      <div class="form-section">
+        <p>Track Entries Live Here: <a href="https://1drv.ms/x/c/a0231f37de8f0113/Ed7X9cUC1fZMjrLRRq3Bav0Bh2i1r_1DOk6cVzs4--YTsg?e=otJOlY">Track</a></p>
       </div>
       <div class="twitter-timeline-container">
         <a class="twitter-timeline" href="https://twitter.com/FUPAupdates?ref_src=twsrc%5Etfw">Tweets by FUPAupdates</a>
